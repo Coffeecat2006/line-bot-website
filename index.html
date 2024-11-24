@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>學測機器人 - 官方網站</title>
+    <style>
+        :root {
+            --primary: #7BC950;
+            --secondary: #2d3436;
+            --bg-light: #f5f7fa;
+            --line-green: #00B900;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft JhengHei", sans-serif;
+        }
+
+        body {
+            background: var(--bg-light);
+            color: var(--secondary);
+            line-height: 1.6;
+        }
+
+        .navbar {
+            background: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--secondary);
+            font-weight: 500;
+        }
+
+        .hero {
+            background: var(--primary);
+            color: white;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .title {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .qr-section {
+            background: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .qr-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .line-button {
+            background: var(--line-green);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.2s;
+        }
+
+        .line-button:hover {
+            transform: scale(1.05);
+        }
+
+        .features {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .submit-section {
+            background: white;
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+        }
+
+        .submit-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .submit-form {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .submit-button {
+            background: var(--primary);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .submit-button:hover {
+            background: #6ab840;
+        }
+
+        .footer {
+            background: var(--secondary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .title {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .qr-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#" class="nav-logo">學測機器人</a>
+            <div class="nav-links">
+                <a href="#features">功能介紹</a>
+                <a href="#submit">投稿專區</a>
+                <a href="#about">關於我們</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="title">學測機器人</h1>
+            <p class="subtitle">一個專為學測準備的LINE機器人，提供每日倒數提醒、學測練習題與詳解、重點整理，助你有效備考。還可提問學測相關問題。讓學測準備更有條理！</p>
+        </div>
+    </section>
+
+    <section class="qr-section">
+        <div class="qr-container">
+            <img src="[QR Code 圖片位置]" alt="LINE QR Code" width="200">
+            <a href="https://lin.ee/fmZhCm0" target="_blank" class="line-button">
+                <span>加入 LINE 好友</span>
+                <span>👉</span>
+            </a>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="feature-card">
+            <div class="feature-icon">⏰</div>
+            <h3>每日倒數提醒</h3>
+            <p>準時發送倒數通知，掌握備考進度</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📝</div>
+            <h3>每日練習題</h3>
+            <p>精選各科練習題目，紮實學習</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📚</div>
+            <h3>詳解重點</h3>
+            <p>完整解題說明與重點整理</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">❓</div>
+            <h3>問題諮詢</h3>
+            <p>學測相關問題即時解答</p>
+        </div>
+    </section>
+
+    <section id="submit" class="submit-section">
+        <div class="submit-container">
+            <h2>投稿專區</h2>
+            <p>分享你的筆記、題目或重點整理，協助更多同學準備學測！</p>
+            <form class="submit-form" action="/submit" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="title">標題</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="content">內容說明</label>
+                    <textarea id="content" name="content" rows="6" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="file">上傳檔案（可選）</label>
+                    <input type="file" id="file" name="file">
+                    <small>支援格式：PDF、圖片、文件檔，大小限制10MB</small>
+                </div>
+                <button type="submit" class="submit-button">送出投稿</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>學測機器人 © 2024 版權所有</p>
+        <p>開發團隊：Coffeecat, Mike, Brian</p>
+    </footer>
+</body>
+</html>
